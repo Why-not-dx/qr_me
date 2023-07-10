@@ -47,7 +47,7 @@ requirements = python3,kivy,kivymd,qrcode,colorama
 #presplash.filename = %(source.dir)s/data/blank_qr_code.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/images/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
