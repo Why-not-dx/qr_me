@@ -13,7 +13,7 @@ package.domain = org.test
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+requirements = python3==Python 3.9.7,hostpython3== 3.9.7,kivy==2.1.0,kivymd==1.1.1,qrcode==7.4.2,colorama==0.4.6,Pillow==9.5.0,pypng==0.20220715.0,requests==2.31.0
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = images/*.png
