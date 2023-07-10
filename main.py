@@ -33,7 +33,7 @@ class MainScreen(MDBoxLayout):
     ):
         """Return selected color."""
 
-        print(f"Selected color is {selected_color}")
+
         self.update_color(selected_color[:-1] + [1])
 
     def on_select_color(self, instance_gradient_tab, color: list):
