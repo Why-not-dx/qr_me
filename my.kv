@@ -4,25 +4,47 @@ MainScreen:
 <MainScreen>:
     MDBoxLayout:
         orientation: "vertical"
-        padding: 5
-        spacing: 5
+        padding: 30
+        spacing: 10
 
-        MDLabel: 
-            text: "Welcome to Qr_me"
-
-        MDTextField:
-            id: my_link
-            hint_text: "add your link here"
-            required: True
-
-        
         MDLabel:
-            id: ze_label
-            text: "This background should change"
+            size_hint: (1, .3)
+            pos_hint: {"center_x": .5}
+            text: "WELCOME TO QR_ME"
+            size: self.texture_size
+            text_size: self.size
+            halign: "center"
 
-        
-        MDRectangleFlatButton:
-            text: "Choose a color for your background"
-            on_release: root.open_color_picker()
-        
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            padding: 5
+            spacing: 5
+
+            MDTextField:
+                id: my_link
+                padding: 5
+                hint_text: "add your link here"
+                required: True
+
+            MDRectangleFlatButton:
+                text: "Create QR code"
+                on_release:
+                    print(my_link.text)
+                    root.qr_creation(link=my_link.text)
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            padding: 5
+            MDLabel:
+                pos_hint: {"center_y": .5}
+                id: ze_label
+                text: "Chosen color"
+
+            MDRectangleFlatButton:
+                pos_hint: {"center_y": .5}
+                text: "Choose a color for your background"
+                on_release: root.open_color_picker()
+
+
         
